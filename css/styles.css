@@ -8,8 +8,7 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
-
-.nav-items {
+.nav-items{
     display: none;
 }
 
@@ -51,15 +50,15 @@ nav {
 }
 
 
-.burger.open .burger-line:nth-child(1) {
+.burger.active .burger-line:nth-child(1) {
     transform: rotate(45deg) translate(13px, 6px);
 }
 
-.burger.open .burger-line:nth-child(2) {
+.burger.active .burger-line:nth-child(2) {
     opacity: 0;
 }
 
-.burger.open .burger-line:nth-child(3) {
+.burger.active .burger-line:nth-child(3) {
     transform: rotate(-45deg) translate(13px, -6px);
 }
 
@@ -81,7 +80,33 @@ nav {
     box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.69);
 }
 
+.nav-items-movil {
+    position: absolute;
+    background: white;
+    list-style: none;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateX(100%);
+}
 
+.nav-items-movil a {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 300;
+    color: #333;
+    font-size: 1.8em;
+    text-decoration: none;
+}
+.nav-items-movil a:hover {
+    color: #f07a42;
+    text-decoration: none;
+}
 main {
     width: 100%;
     margin-top: 3.3rem;
@@ -195,7 +220,7 @@ footer p {
     align-items: center;
     text-align: center;
     width: 100%;
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     font-weight: 300;
     background-color: #FFFFFF;
     color: #333;
@@ -216,15 +241,19 @@ footer p {
     .burger {
         display: none;
     }
+    .nav-items-movil{
+        display: none;
+    }
+    .nav {
+        display: flex;
+    }
 
     .nav-items {
         display: flex;
+        width: 100%;
         justify-content: space-around;
         align-items: center;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
+        list-style: none;
     }
 
     .nav-items a {
@@ -235,10 +264,7 @@ footer p {
         text-decoration: none;
     }
 
-    .nav-items li {
-        margin: 0 1rem;
-        list-style: none;
-    }
+
 
     /*main*/
     main {
@@ -281,7 +307,8 @@ footer p {
         text-align: left;
 
     }
-    #title{
+
+    #title {
         font-size: 3.9rem;
         font-weight: 300;
         text-align: left;
@@ -291,6 +318,7 @@ footer p {
         justify-content: start;
         align-items: center;
     }
+
     #descripcion {
         color: #3a3a3a;
         display: flex;
@@ -317,11 +345,11 @@ footer p {
         object-fit: cover;
         border-radius: 0.5rem;
     }
+
     .box-1 {
         padding-left: 4.5rem;
     }
 }
-
 
 
 /*h1 {*/
